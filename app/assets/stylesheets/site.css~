@@ -10,6 +10,11 @@ body {
   background-color:#FFCBCB;
 }
 
+/* yield */
+#yield {
+  margin:10px 10px 10px 10px;
+}
+
 /* content */
 #content {
   background-color:#E5E1E1;
