@@ -1,0 +1,5 @@
+<div class="jumbotron">
+  <h1>Welcome to Andres Application</h1>
+   <a href="<%= url(:users, :new) %>">Register</a> and start.</p>
+  <a class="btn btn-large btn-success" href="<%= url(:users, :new) %>">Publish a Job</a>
+</div>
