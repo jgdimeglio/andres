@@ -1,4 +1,4 @@
-module JobVacancy
+module AndresApplication
   class App < Padrino::Application
     register Padrino::Rendering
     register Padrino::Mailer

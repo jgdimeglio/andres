@@ -1,4 +1,4 @@
-JobVacancy::App.controllers :sessions do
+AndresApplication::App.controllers :sessions do
   
   get :login, :map => '/login' do
     @user = User.new

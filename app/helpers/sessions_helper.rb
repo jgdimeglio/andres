@@ -1,4 +1,4 @@
-JobVacancy::App.helpers do
+AndresApplication::App.helpers do
 	
 	def current_user=(user)
 		@current_user = user 
