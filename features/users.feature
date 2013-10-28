@@ -12,12 +12,19 @@ Feature: Users
 		And confirm the new user    
     Then I should see "User created"	
 
-  Scenario: login user
+  Scenario: Login user
     Given I access the login user page
 	And I fill the email with "prueba@test.com"
     	And I fill the password with "Test1234"
 	And confirm the login user 
     Then I should see "prueba@test.com"
+
+   Scenario: Not login user, Invalid credentials
+    Given I access the login user page
+	And I fill the email with "emailNotExist@test.com"
+    	And I fill the password with "Test1234"
+	And confirm the login user 
+    Then I should see "Invalid credentials"
 
    Scenario: Not create new user,password do not match
     Given I access the new user page
