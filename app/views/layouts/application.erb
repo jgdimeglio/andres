@@ -34,11 +34,10 @@
           </div>
         </div><!-- /.navbar -->
       </div>
-
+      <div> <%= [:error, :warning, :success, :notice].map { |type| flash_tag(type, :class => "alert alert-#{type} fade in", :bootstrap => true) }.join.html_safe %>
+      </div>
       <div class="container" id="content">
-			  <div>
-			    <%= [:error, :warning, :success, :notice].map { |type| flash_tag(type, :class => "alert alert-#{type} fade in", :bootstrap => true) }.join.html_safe %>
-			  </div>
+			  
 	<div id="yield">
       		<%= yield %>
 	<div>
