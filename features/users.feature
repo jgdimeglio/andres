@@ -1,7 +1,7 @@
 Feature: Users
-  
+  I want to create a user
+  I want to login with my user
 
-  
 
   Scenario: Create new user
     Given I access the new user page
