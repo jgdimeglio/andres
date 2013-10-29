@@ -6,9 +6,16 @@ AndresApplication::App.controllers :events do
     render 'events/new'
   end
 
-   get :create do
-    @event=Event.new
-    render 'events/new'
+   post :create do
+    @event = Event.new(params[:event])
+    @event.owner = current_user
+    if @event.save
+      flash[:success] = 'Event created'
+      redirect '/events/new'
+    else
+      flash.now[:error] = 'The start date field is mandatory'
+      redirect '/events/new'
+    end  
   end
 
 
