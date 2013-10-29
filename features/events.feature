@@ -7,7 +7,7 @@ Feature: Events
 
   Scenario: Create new event
     Given I access the new event page
-    When I fill the start date with "1/11/2013"
+    When I fill the start date with "2013/3/23"
 		And confirm the new event    
     Then I should see "Event created"	
 

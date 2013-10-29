@@ -3,7 +3,7 @@ class Event
   include DataMapper::Resource
 
   property :id, Serial
-  property :startdate, String
+  property :startdate, Date
   belongs_to :user
 
   validates_presence_of :startdate
