@@ -1,6 +1,7 @@
 
 Given(/^I access the new event page$/) do
   visit '/events/new'
+  page.should have_content('New Event')
 end
 
 When(/^I fill the finicio with "(.*?)"$/) do |finicio|

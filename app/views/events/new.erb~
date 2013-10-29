@@ -1,0 +1,9 @@
+<h1>New Event</h1>
+<% form_for(@event, '/events/create') do |f| %> 
+	<%= f.label :Fecha %>
+	<%= f.text_field :finicio %>
+	
+  <br/>
+  <%= f.submit "Create", :class => "btn btn-primary" %>
+<% end %>
+
