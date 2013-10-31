@@ -41,6 +41,14 @@ Feature: Events
 	And I should see "31/01/2014"
 	And I should see "12/01/2013"
 
+  Scenario: Events list , two events
+    Given I access the my events page
+	And I have an event created with date "01/05/2013"
+	And I have an event created with date "01/07/2013"
+    Then I should see "01/05/2013"
+	And I should see "01/07/2013"
+
+
  
 
    
