@@ -20,6 +20,15 @@ class Event
 	Event.all(:user => user)
   end
 
+  def self.stringFormat(date)
+	date.mday.to_s()  + '-' + date.month.to_s() + '-'+date.year.to_s()
+  end
+
+  def fertilePeriod()
+        #return [start , end ]
+	[self.startdate+12,startdate+16]
+  end
+
 end
 
 

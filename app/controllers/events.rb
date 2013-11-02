@@ -19,7 +19,6 @@ AndresApplication::App.controllers :events do
   end
 
   get :my do
-    @index=0
     @events = Event.find_by_owner(current_user)
     render 'events/my_events'
   end 

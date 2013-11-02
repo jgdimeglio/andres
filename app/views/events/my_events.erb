@@ -2,20 +2,26 @@
 <table class="table table-bordered">
 	<tr>
 		<th>#</th>
-		<th>Fertile Periode</th>
+                <th>Start Event</th>
+		<th>Fertile Period</th>
 		<th>Next event</th>
 	</tr>
+	<% index=0 %>
 	<% @events.each do | event | %>
-
 	<tr>
 		<td>
-			<%= @index=@index+1%>
+			<%= index+=1 %>
 		</td>
 		<td>
-			<%= event.startdate %>
+			<%=  Event.stringFormat(event.startdate) %>
+
 		</td>
 		<td>
-			
+			<% from,to= event.fertilePeriod()  %>
+			<%= Event.stringFormat(from) %>    <b>To</b>    <%= Event.stringFormat(to)  %>
+		</td>
+		<td>
+			<%= Event.stringFormat(event.startdate + 28)  %>
 		</td>
 					
 	</tr>
