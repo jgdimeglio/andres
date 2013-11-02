@@ -21,7 +21,8 @@ if ['development', 'test', 'travis'].include?(PADRINO_ENV)
     end
   end
 
-  task :build_server do
+  # task :build_server do  -->linea original
+  task :travis do
   ["rake spec_report", "rake cucumber_report"].each do |cmd|
     puts "Starting to run #{cmd}..."
     system("export DISPLAY=:99.0 && bundle exec #{cmd}")
