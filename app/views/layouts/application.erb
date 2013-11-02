@@ -26,6 +26,7 @@
                 <li><%= link_to 'Home', url_for(:home, :index) %></li>
              					<% if signed_in? %>	
 								<li><%= link_to 'New Event', url_for(:events, :new) %></li>
+                                                                <li><%= link_to 'My Events', url_for(:events, :my) %></li>
 								<li><%= link_to 'Logout', url_for(:sessions, :destroy) %></li>
 								<% else%>	
 								<li><%= link_to 'Login', url_for(:sessions, :login) %></li>
