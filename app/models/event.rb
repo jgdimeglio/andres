@@ -26,7 +26,7 @@ class Event
 
   def fertilePeriod()
         #return [start , end ]
-	[self.startdate+12,startdate+16]
+	[self.startdate+11,startdate+15]
   end
 
 end

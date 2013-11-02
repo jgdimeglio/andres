@@ -1,5 +1,5 @@
 
-Given(/^I access the new event page$/) do
+And(/^I access the new event page$/) do
   visit '/events/new'
   page.should have_content('New Event')
 end
@@ -19,4 +19,16 @@ Given(/^I am logged$/) do
   click_button('Login')
   page.should have_content('prueba@test.com')
 end
+
+
+Given(/^I access the my events page$/) do
+  visit '/events/my'
+end
+
+Given(/^I have an event created with date "(.*?)"$/) do |date|
+  visit '/events/new'
+  fill_in('event[startdate]', :with => date)
+  click_button('Create')
+end
+
 
