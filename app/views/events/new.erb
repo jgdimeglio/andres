@@ -1,9 +1,19 @@
+<%= javascript_include_tag '/assets/jquery-1.9.1' %>
+<%= javascript_include_tag '/assets/jquery-ui' %> 
+<%= stylesheet_link_tag '/assets/jquery-ui.css' %>
+
+<script type="text/javascript">
+
+$(function() {
+	$( "#event_startdate" ).datepicker();
+});
+
+</script>
+
 <h1>New Event</h1>
 <% form_for(@event, '/events/create') do |f| %> 
 	<%= f.label :date %>
-	<%= f.text_field :startdate %> Format: yyyy/mm/dd
-
+	<%= f.text_field :startdate %> Format: dd/mm/yyyy
   <br/>
   <%= f.submit "Create", :class => "btn btn-primary" %>
 <% end %>
-
