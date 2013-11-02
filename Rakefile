@@ -60,6 +60,6 @@ if ['development', 'test', 'travis'].include?(PADRINO_ENV)
     task.fail_on_error = false
   end
 
-	task :default => [:all]
+	task :default => [:travis]
 
 end
