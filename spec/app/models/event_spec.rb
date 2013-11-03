@@ -9,6 +9,16 @@ describe Event do
 		it { should respond_to( :id) }
 		it { should respond_to( :startdate) }
                 it { should respond_to( :fertilePeriod) }
+		it { should respond_to( :owner) }
+	end
+
+        describe ' owner' do
+		let(:event) { Event.new }
+		it 'should have owner' do
+		   user=User.new()
+	           event.owner=user
+		   event.owner.should == user
+		end
 	end
 
         describe ' String format' do
