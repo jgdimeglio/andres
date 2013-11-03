@@ -1,5 +1,9 @@
 AndresApplication::App.controllers :sessions do
   
+  before do
+	@accessible=(not signed_in?)
+  end  
+
   get :login, :map => '/login' do
     @user = User.new
     render 'sessions/new'

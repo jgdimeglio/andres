@@ -1,5 +1,7 @@
 AndresApplication::App.controllers :users do
-  
+  before do
+	@accessible=(not signed_in?)
+  end  
   # get :index, :map => '/foo/bar' do
   #   session[:foo] = 'bar'
   #   render 'index'

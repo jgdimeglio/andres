@@ -1,5 +1,8 @@
 AndresApplication::App.controllers :events do
   
+  before do
+	@accessible= signed_in?
+  end  
 
   get :new do
     @event=Event.new

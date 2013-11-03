@@ -41,7 +41,11 @@
       <div class="container" id="content">
 			  
 	<div id="yield">
+		<% if @accessible %>
       		<%= yield %>
+		<% else %>
+		Not accessible
+		<%end %>
 	<div>
 
       </div>
