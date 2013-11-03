@@ -26,5 +26,5 @@ RSpec.configure do |conf|
 end
 
 def app
-  JobVacancy::App.tap { |app|  }
+  AndresApplication::App.tap { |app|  }
 end
