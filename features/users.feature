@@ -35,6 +35,24 @@ Feature: Users
 		And confirm the new user    
     Then I should see "Passwords do not match" 
 
+    Scenario: Not create new user,the length of the password is less than 8
+    Given I access the new user page
+    When I fill the name with "Pedro"
+		And I fill the email with "pedro.19@test.com"
+		And I fill the password with "Test1"
+		And I fill the password_confirmation with "Test1"
+		And confirm the new user    
+    Then I should see "All fields are mandatory" 
+
+    Scenario: Not create new user,the password does not have uppercase
+    Given I access the new user page
+    When I fill the name with "Pedro"
+		And I fill the email with "pedro.19@test.com"
+		And I fill the password with "123456789"
+		And I fill the password_confirmation with "123456789"
+		And confirm the new user    
+    Then I should see "All fields are mandatory" 
+
     Scenario: Not create new user,email in use
     Given I access the new user page
     When I fill the name with "Pedro"

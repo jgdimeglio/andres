@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'JobOffersController' do
+describe 'EventsController' do
 
 	describe 'get :new' do
 		
