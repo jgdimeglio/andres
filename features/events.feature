@@ -11,6 +11,12 @@ Feature: Events
 		And confirm the new event    
     Then I should see "Event created"	
 
+  Scenario: Create not event
+    Given I access the new event page
+    When I fill the start date with "1123-4-2013"
+		And confirm the new event    
+    Then I should see "Invalid event"
+
   
 
   Scenario: Events list

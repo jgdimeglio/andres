@@ -16,7 +16,7 @@ AndresApplication::App.controllers :events do
       flash[:success] = 'Event created'
       redirect '/events/new'
     else
-      flash.now[:error] = 'The start date field is mandatory'
+      flash[:error] = 'Invalid event'
       redirect '/events/new'
     end  
   end
