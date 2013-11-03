@@ -29,6 +29,10 @@ class Event
 	[self.startdate+11,startdate+15]
   end
 
+  def nextEvent()
+	self.startdate+27
+  end
+
 end
 
 
