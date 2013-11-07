@@ -36,7 +36,8 @@ AndresApplication::App.controllers :users do
 		  flash[:success] = 'User created'
 		  redirect '/'
 		else
-		  if @user.crypted_password == nil and params[:user][:crypted_password] != nil
+		
+		  if @user.crypted_password == nil and params[:user][:password] != ''
                     flash.now[:error] = 'The password must be uppercase, numbers and more than 7 characters'
 		    render 'users/new'
 		  else
