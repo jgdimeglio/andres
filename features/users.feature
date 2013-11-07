@@ -42,7 +42,7 @@ Feature: Users
 		And I fill the password with "Test1"
 		And I fill the password_confirmation with "Test1"
 		And confirm the new user    
-    Then I should see "All fields are mandatory" 
+    Then I should see "The password must be uppercase, numbers and more than 7 characters" 
 
     Scenario: Not create new user,the password does not have uppercase
     Given I access the new user page
@@ -51,7 +51,7 @@ Feature: Users
 		And I fill the password with "123456789"
 		And I fill the password_confirmation with "123456789"
 		And confirm the new user    
-    Then I should see "All fields are mandatory" 
+    Then I should see "The password must be uppercase, numbers and more than 7 characters" 
 
     Scenario: Not create new user,email in use
     Given I access the new user page

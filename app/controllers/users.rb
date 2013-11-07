@@ -36,8 +36,13 @@ AndresApplication::App.controllers :users do
 		  flash[:success] = 'User created'
 		  redirect '/'
 		else
-		  flash.now[:error] = 'All fields are mandatory'
-		  render 'users/new'
+		  if @user.crypted_password == nil
+                    flash.now[:error] = 'The password must be uppercase, numbers and more than 7 characters'
+		    render 'users/new'
+		  else
+		    flash.now[:error] = 'All fields are mandatory'
+		    render 'users/new'
+		  end
 		end
 	      else
 		@user = User.new (params[:user])
