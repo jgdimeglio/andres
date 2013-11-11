@@ -31,4 +31,22 @@ Given(/^I have an event created with date "(.*?)"$/) do |date|
   click_button('Create')
 end
 
+When(/^I fill the commetn with "(.*?)"$/) do |comment|
+  fill_in('event[comment]', :with => comment)
+end
+
+Given(/^I have an event created with comment "(.*?)"$/) do |comment|
+  event=Event.new
+  event.startdate=Date.today
+  event.comment=comment
+  event.owner=User.first
+  event.save
+end
+
+Given(/^I click the button comment$/) do
+  click_link('Comment')
+end
+
+
+
 

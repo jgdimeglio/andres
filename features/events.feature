@@ -5,6 +5,21 @@ Feature: Events
   Background:
   	Given I am logged
 
+
+  Scenario: See comment created
+    Given I have an event created with comment "this a comment"
+    		And I access the my events page
+		And I click the button comment  
+    Then I should see "this a comment"
+
+
+ Scenario: Create new event with comment
+    Given I access the new event page
+    When I fill the start date with "11-4-2013"
+		And I fill the commetn with "A comment"
+		And confirm the new event    
+    Then I should see "Event created"
+
   Scenario: Create new event
     Given I access the new event page
     When I fill the start date with "11-4-2013"
@@ -55,6 +70,11 @@ Feature: Events
         And I access the my events page
     Then I should see "1-5-2013"
 	And I should see "1-7-2013"
+
+   
+
+    
+  
 
 
  
