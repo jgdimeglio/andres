@@ -15,6 +15,8 @@ $(function() {
 <% form_for(@event, '/events/create') do |f| %> 
 	<%= f.label :date %>
 	<%= f.text_field :startdate %> Format: dd/mm/yyyy
+	<%= f.label :comment %>
+	<%= f.text_area :comment %> 
   <br/>
   <%= f.submit "Create", :class => "btn btn-primary" %>
 <% end %>

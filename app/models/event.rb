@@ -4,6 +4,7 @@ class Event
 
   property :id, Serial
   property :startdate, Date
+  property :comment, String
   belongs_to :user
 
   validates_presence_of :startdate

@@ -1,0 +1,11 @@
+
+
+<h1>Comment - Event <%= Event.stringFormat(@event.startdate) %></h1>
+<br>
+<div>
+<% if @event.comment != '' then %>
+	<%=  @event.comment %>
+<% else %>
+	This event has no comments
+<%  end %>
+<div>

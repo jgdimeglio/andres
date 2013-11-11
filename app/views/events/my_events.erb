@@ -1,3 +1,5 @@
+
+
 <h1>My Events</h1>
 <table class="table table-bordered">
 	<tr>
@@ -5,12 +7,14 @@
                 <th>Start Event</th>
 		<th>Fertile Period</th>
 		<th>Next event</th>
+		<th>Actions</th>
 	</tr>
 	<% index=0 %>
 	<% @events.each do | event | %>
 	<tr>
 		<td>
 			<%= index+=1 %>
+			<div id="dialog_<%= index%>" style="display:none"><%=  event.comment  %></div>
 		</td>
 		<td>
 			<%=  Event.stringFormat(event.startdate) %>
@@ -23,6 +27,9 @@
 		<td>
 			<%= Event.stringFormat(event.nextEvent)  %>
 		</td>
+		<td >
+<%= link_to 'Comment', url_for(:events, :comment, :event_id => event.id), :class => "btn btn-primary" %>
+		</td>
 					
 	</tr>
 
@@ -31,3 +38,4 @@
 
 
 </table>
+

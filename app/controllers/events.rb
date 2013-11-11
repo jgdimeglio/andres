@@ -26,4 +26,9 @@ AndresApplication::App.controllers :events do
     render 'events/my_events'
   end 
 
+  get :comment, :with =>:event_id do
+    @event = Event.get(params[:event_id])
+    render 'events/comment'
+  end 
+
 end
