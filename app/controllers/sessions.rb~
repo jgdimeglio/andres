@@ -2,7 +2,6 @@ AndresApplication::App.controllers :sessions do
   
   before do
 	@accessible=(not signed_in?)
-	@advert = Advert.find_current()
   end  
 
   get :login, :map => '/login' do
