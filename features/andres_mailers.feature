@@ -7,7 +7,7 @@ Feature: Andres Mailers
   		And the user registered "1@test.com"
 		And the user registered "2@test.com"
 		And the user registered "3@test.com"
-
+		And the user registered "4@test.com"
 
   Scenario: Send a notification
         Given "1@test.com" user has an event to be reported today
@@ -23,7 +23,16 @@ Feature: Andres Mailers
 	Then "1@test.com" user should receive an email
         	And "2@test.com" user should receive an email
 		And "3@test.com" user should receive an email
-   
+
+  Scenario: Send notifications to all but 4@test.com
+        Given "1@test.com" user has an event to be reported today
+		And "2@test.com" user has an event to be reported today
+		And "3@test.com" user has an event to be reported today
+        	When notifications are sent
+	Then "1@test.com" user should receive an email
+        	And "2@test.com" user should receive an email
+		And "3@test.com" user should receive an email
+   		And "4@test.com" user should not receive an email
 
     
   

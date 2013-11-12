@@ -28,4 +28,15 @@ Then(/^"(.*?)" user should receive an email$/) do |email|
   
 end
 
+Then(/^"(.*?)" user should not receive an email$/) do |email|
+  begin
+  	mail_store = "#{Padrino.root}/tmp/emails"
+  	file = File.open("#{mail_store}/"+email, "r")
+	raise 'The '+ email +'file should not be created'
+  rescue Exception
+
+  end
+  
+end
+
 
