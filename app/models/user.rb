@@ -5,6 +5,7 @@ class User
   property :name, String
   property :crypted_password, String
   property :email, String
+  property :admin, Boolean , :default => false
   has n, :events
 
   validates_presence_of :name
