@@ -1,5 +1,6 @@
 When(/^notifications are sent$/) do
-  AndresMailer.send_email_nextEvent
+  andres_mailer=AndresMailer.new
+  andres_mailer.send_email_nextEvent
 end
 
 
