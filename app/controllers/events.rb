@@ -2,7 +2,7 @@ AndresApplication::App.controllers :events do
   
   before do
 	@accessible= signed_in?
-        @advert = Advert.find_current()
+      
   end  
 
   get :new do

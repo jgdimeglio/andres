@@ -1,7 +1,7 @@
 AndresApplication::App.controllers :users do
   before do
 	@accessible=(not signed_in?)
-	@advert = Advert.find_current()
+
   end  
   # get :index, :map => '/foo/bar' do
   #   session[:foo] = 'bar'
