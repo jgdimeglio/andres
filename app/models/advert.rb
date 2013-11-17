@@ -1,4 +1,6 @@
 class Advert
+  
+
   include DataMapper::Resource
 
   property :id, Serial
@@ -17,6 +19,7 @@ class Advert
 	@@advertStrategyShow.find_advert()
   end
  
-  
-  
+  def self.set_advertStrategyShow(a_advertStrategyShow)
+  	@@advertStrategyShow=a_advertStrategyShow
+  end
 end
