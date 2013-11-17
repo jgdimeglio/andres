@@ -13,12 +13,43 @@ Feature: Admin
         	Then I should see "Advertising"	
 		Then I should see "New advertising"
 
+
  Scenario: Remove advertising
 	Given I access the advertising show page
 		And I have created an advertisement
 	When confirm delete
 	Then I should see "Advertising successfully deleted"
-   
+
+
+ Scenario: Edit correctly an advertisement
+	Given I access the home page
+		And I have created an advertisement
+	When confirm Edit
+           	And I fill the text with "content text"
+		And I fill the enabled with "No"
+		And confirm the update advert
+	Then I should see "content text"
+		And I should see "advertising"	
+		And I should see "No"	
+		And I should see "Advertising updated"
+
+ Scenario: Do not edit without completing the field title
+	Given I access the home page
+		And I have created an advertisement
+	When confirm Edit
+		And I fill the title with ""
+		And confirm the update advert
+	Then I should see "All fields are mandatory"
+
+ Scenario: Do not edit without completing the field text
+	Given I access the home page
+		And I have created an advertisement
+	When confirm Edit
+		And I fill the text with ""
+		And confirm the update advert
+	Then I should see "All fields are mandatory"
+		
+
   Scenario: create publicity correctly
 	Given I access the advertising new page
 	When I fill the title with "advertising"

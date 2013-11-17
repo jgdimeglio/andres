@@ -37,12 +37,16 @@ When(/^confirm the new advert$/) do
    click_button('Create')
 end
 
+When(/^confirm the update advert$/) do
+   click_button('Update')
+end
 
 Given(/^I access the advertising show page$/) do
    visit '/adverts/show'
 end
 
 Given(/^I have created an advertisement$/) do
+  Advert.all.destroy
   advert=Advert.new
   advert.title="title"
   advert.text="text"
@@ -53,6 +57,16 @@ end
 When(/^confirm delete$/) do
   click_link('Delete')
 end
+
+When(/^confirm Edit$/) do
+  click_link('Edit')
+end
+
+
+When(/^I fill the enabled with "(.*?)"$/) do |enabled|
+  page.select enabled, :from => 'advert[enabled]'
+end
+
 
 
 

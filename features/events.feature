@@ -12,6 +12,7 @@ Feature: Events
 		And I click the button comment  
     Then I should see "this a comment"
 
+  
 
  Scenario: Create new event with comment
     Given I access the new event page
