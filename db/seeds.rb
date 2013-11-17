@@ -7,20 +7,20 @@
 
  Advert.create(:title => 'Publicity',
 					:text => 'Compre compre!', 
-					:enable => 'No')
+					:enabled => 'No')
 
  Advert.create(:title => 'Publicom',
 					:text => 'Ofertas !', 
-					:enable => 'Yes')
+					:enabled => 'Yes')
 
  Advert.create(:title => 'Publicate.com',
 					:text => 'Ultimas ofertas!', 
-					:enable => 'Yes')
+					:enabled => 'Yes')
 
  Advert.create(:title => 'Publicaya.com.ar',
 					:text => 'No te pierdas esta oportunidad', 
-					:enable => 'Yes')
+					:enabled => 'Yes')
 
  Advert.create(:title => 'republica.com',
 					:text => 'ultimas novedades', 
-					:enable => 'No')
+					:enabled => 'No')
