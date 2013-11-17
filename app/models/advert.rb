@@ -6,14 +6,15 @@ class Advert
   property :text, String
   property :enabled,String , :default => 'Yes'
  
+  @@advertStrategyShow = RandomStrategyShow.new
+
   validates_presence_of :title
   validates_presence_of :text
   validates_presence_of :enabled
 
+
   def self.find_current()
-	out = Advert.new
-	out.text = "compre compre" 
-	return out
+	@@advertStrategyShow.find_advert()
   end
  
   
