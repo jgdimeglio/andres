@@ -27,7 +27,8 @@
 								<li><%= link_to 'New Event', url_for(:events, :new) %></li>
                                                                 <li><%= link_to 'My Events', url_for(:events, :my) %></li>
 							<% if signed_in_admin? %>
-<li><%= link_to 'Advertising', url_for(:users, :advertising) %></li>
+<li><%= link_to 'Advertising', url_for(:adverts, :show) %></li>
+<li><%= link_to 'New advertising', url_for(:adverts, :new) %></li>
 							<% end %>
 								<li><%= link_to 'Logout', url_for(:sessions, :destroy) %></li>
 								<% else%>	

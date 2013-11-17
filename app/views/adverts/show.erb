@@ -1,0 +1,43 @@
+
+
+<h1>Ads</h1>
+<table class="table table-bordered">
+	<tr>
+		<th>#</th>
+                <th>Title</th>
+		<th>Text</th>
+		<th>Enabled</th>
+		<th>Actions</th>
+	</tr>
+	<% index=0 %>
+	<% @adverts.each do | advert | %>
+	<tr>
+		<td>
+			<%= index+=1 %>
+			
+		</td>
+		<td>
+			<%=  advert.title %>
+
+		</td>
+		<td>
+			<%=  advert.text %>
+		</td>
+			<% if advert.enabled == 'Yes' then%>
+				<td style="background:green;color:white">Yes</td>
+			<% else %>
+				<td style="background:red;color:white">No</td>
+			<% end%>
+		<td >
+			<%= link_to 'Delete', url_for(:adverts, :delete, :advert_id => advert.id), :class => "btn btn-primary" %>
+			<%= link_to 'Edit', url_for(:adverts, :edit, :advert_id => advert.id), :class => "btn btn-primary" %>
+		</td>
+					
+	</tr>
+
+        <% end %>
+
+
+
+</table>
+

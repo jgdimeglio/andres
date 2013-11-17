@@ -58,8 +58,5 @@ AndresApplication::App.controllers :users do
       end
   end
 
-  get :advertising do
-    @accessible=signed_in_admin?
-  end
 
 end

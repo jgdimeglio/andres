@@ -1,0 +1,12 @@
+
+<h1>New Event</h1>
+<% form_for(@advert, '/adverts/update/'+@advert.id.to_s) do |f| %> 
+	<%= f.label :title %>
+	<%= f.text_field :title %> 
+	<%= f.label :text %>
+	<%= f.text_area :text %> 
+	 <%= f.label :"Enabled" %>
+	<%= f.select :enabled, :options => ['Yes', 'No']  %>
+  <br/>
+  <%= f.submit "Update", :class => "btn btn-primary" %>
+<% end %>
