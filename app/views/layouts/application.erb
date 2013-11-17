@@ -53,14 +53,16 @@
 
       </div>
 <br />
-	<div class="masthead">
-	        <div class="container">
-        	  <div class="adver">
-          		<h4><%=current_adv().text %></h4>
-        	 </div>
-   		 </div>
-      </div> 
-
+	<% adv = current_adv()
+		if adv != nil then %>
+			<div class="masthead">
+				<div class="container">
+				  <div class="adver">
+			  		<h4><%=current_adv().text %></h4>
+				 </div>
+		   		 </div>
+		      </div> 
+	<%end%>
       <!-- footer -->
       <div class="footer">
       	<hr/>
