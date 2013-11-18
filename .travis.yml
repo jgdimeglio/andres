@@ -1,13 +1,12 @@
 languaje: ruby
 version: 1.9.3
 before_script:
-
 - sh -e /etc/init.d/xvfb start
 script: PADRINO_ENV=travis bundle exec rake
 deploy:
   provider: heroku
   api_key:
-    secure: ZpMA9tRMSeIYbZ8Nqu94GI3qxge4Y+0P50XGwtAByWYLolsAJ9JRUCxWb9vSJHwbQigtK7DpUui2io8WSMLZsyQ2raYwBoNDNycar9gAO1OEWGWBgd52hMvQ9Y+kola2qZUk7L0ZrZ5uNZCdcclY8B1yyXY03lYvP7KtqBVMQ7k=
+    secure: GJQw99qTp6cOPeLlxmNmZW0/QV+wPXuBxPKJR8wIdMOicJJ7PR/JgO0eGXrm08GT1vSTUozgFC2ivaN0DlV7Q2CqhVV6jwdVjfbUPzjPhTMsx0VDZYVf8zvKyhRinyNGBiIA5+4myB5PwqsIId4UkmisH+czOJlQrogll9wBVQI=
   app: andres-testing
   on:
     repo: jgdimeglio/andres
