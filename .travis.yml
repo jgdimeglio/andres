@@ -10,3 +10,4 @@ deploy:
   app: andres-testing
   on:
     repo: jgdimeglio/andres
+    branch: master
