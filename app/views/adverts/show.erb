@@ -24,9 +24,9 @@
 			<%=  advert.text %>
 		</td>
 			<% if advert.enabled == 'Yes' then%>
-				<td style="background:green;color:white">Yes</td>
+				<td class="enable">Yes</td>
 			<% else %>
-				<td style="background:red;color:white">No</td>
+				<td class="disabled">No</td>
 			<% end%>
 		<td >
 			<%= link_to 'Delete', url_for(:adverts, :delete, :advert_id => advert.id), :class => "btn btn-primary" %>

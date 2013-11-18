@@ -109,3 +109,14 @@ h1 {
 .adver{
   margin:25px;
 }
+
+
+.enable {
+  background:green;
+  color:white;
+}
+
+.disabled{
+ background:red;
+ color:white
+}

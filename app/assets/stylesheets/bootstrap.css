@@ -2046,7 +2046,9 @@ table {
 }
 
 .table-bordered {
-  border: 1px solid #dddddd;
+  border-top: 1px solid #123123;
+  border-left: 1px solid #123123;
+  border-right: 1px solid #123123;
   border-collapse: separate;
   *border-collapse: collapse;
   border-left: 0;
@@ -2057,7 +2059,8 @@ table {
 
 .table-bordered th,
 .table-bordered td {
-  border-left: 1px solid #dddddd;
+  border-left: 1px solid #123123;
+  border-bottom: 1px solid #123123;
 }
 
 .table-bordered caption + thead tr:first-child th,
@@ -6165,3 +6168,6 @@ a.badge:focus {
 .affix {
   position: fixed;
 }
+
+
+
