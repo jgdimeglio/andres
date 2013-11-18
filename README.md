@@ -1,5 +1,5 @@
 Andres
-=======================
+======================
 
 Problema que se quiere resolver:
 El calculo de los periodos menstruales y de ovulación de una mujer.
